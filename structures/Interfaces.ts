@@ -6,3 +6,7 @@ export interface MetaDataOptions {
     MetaFavicon: string;
     MetaFaviconType: string;
 }
+
+export interface LoaderOptions {
+    isLoading: boolean;
+};

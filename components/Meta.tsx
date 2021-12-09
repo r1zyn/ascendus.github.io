@@ -1,9 +1,9 @@
 import { Head } from "../structures/NextComponents";
 import { MetaData } from "../structures/Constants";
-import type { NextComponentType } from "next";
+import type { NextComponent } from "../structures/Types";
 import { URL } from "../structures/Constants";
 
-export const Meta: NextComponentType = () => {
+export const Meta: NextComponent = () => {
     return (
         <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
