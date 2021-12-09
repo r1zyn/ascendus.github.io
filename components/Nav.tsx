@@ -51,8 +51,7 @@ export const Nav: NextComponentType = () => {
                         </button>
                     </div>
 
-                    {/* Navigation Bar Links */}
-                    <ul className="hidden absolute top-3 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:relative lg:items-center lg:w-auto lg:space-x-8 flex-1 justify-center">
+                    <ul className={styles["nav-bar-links"]}>
                         <li>
                             <Link href="/" passHref>
                                 <a className={this.props.page.toLowerCase() === "home" ? "text-sm text-darkBlue" : "text-sm text-darkGrey hover:text-darkBlue"}><FontAwesomeIcon icon={faHouseUser} />&nbsp;Home</a>
