@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Segoe UI Bold", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    src: local("Segoe UI Bold"), url("/assets/fonts/Segoe\ UI\ 	Bold.woff") format("woff");
+}
+
+:root {
+    --primary: #2f3136;
+    --secondary: #7289da;
+    --tertiary: #ffffff;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+    box-shadow: inset rgba(0, 0, 0, 0.2) 0 0 10000px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
