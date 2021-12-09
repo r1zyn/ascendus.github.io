@@ -9,7 +9,7 @@ const rl = readline.createInterface({
 });
 
 /**
- * Commits recent changes made within the code to the GitHub repository, using the COMMIT_MESSAGE environment variable from the .env file for commiting after compiling TypeScript code.
+ * Commits recent changes made within the code to the GitHub repository.
  * @async
  * @function
  * @param {string} message
