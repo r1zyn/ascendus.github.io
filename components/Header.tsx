@@ -10,8 +10,11 @@ export const Header: NextComponent = () => {
         <div className={styles["header-container"]}>
             <Nav />
             <div className={styles["header-container-content"]}>
-                <Bars className={styles["header-bars"]}/>
-                <h1 className={styles["header-title"]}>Imagining great things.</h1>
+                <Bars className={styles["header-bars"]} />
+                <div className={styles["header-items"]}>
+                    <h1 className={styles["header-title"]}>Imagining great things.</h1>
+                    <p className={styles["header-text"]}>Hey there, I&apos;m Ascendus, a full-stack website, application and partial game developer.</p>
+                </div>
             </div>
         </div>
     );
