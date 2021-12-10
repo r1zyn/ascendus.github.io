@@ -39,6 +39,7 @@
 .nav-icon {
     height: 3rem;
     width: auto;
+    border-radius: 50%;
 }
 
 .nav-title {
@@ -244,6 +245,10 @@
         margin-left: 2rem;
     }
 
+    .nav-menu-button {
+        display: none;
+    }
+
     .nav-link-btn {
         display: inline-block;
     }
@@ -281,6 +286,16 @@
 .header-title {
     color: var(--tertiary);
     text-align: center;
+    margin-left: 2rem;
+    width: 100%;
+}
+
+.header-bars {
+    height: 30vh;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
 }
 
 .container {

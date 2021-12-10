@@ -1,3 +1,9 @@
+import { CSSProperties } from "react";
+
+export interface BarsOptions {
+    className?: string | undefined;
+};
+
 export interface MetaDataOptions {
     MetaTitle: string;
     MetaDescription: string;
