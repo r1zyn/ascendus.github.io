@@ -1,7 +1,7 @@
 import type { LoaderOptions } from "../structures/Interfaces";
 import type { NextComponent } from "../structures/Types";
 
-import styles from "../styles/Loader.module.css";
+import styles from "../styles/Loader.module.scss";
 
 export const Loader: NextComponent<LoaderOptions> = ({ isLoading }: LoaderOptions) => {
     return (

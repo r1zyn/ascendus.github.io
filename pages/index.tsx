@@ -1,4 +1,5 @@
 import { Head, Image } from "../structures/NextComponents";
+import { Header } from "../components/Header";
 import { Meta } from "../components/Meta";
 import type { NextPage } from "next";
 
@@ -10,19 +11,20 @@ const Home: NextPage = () => {
             <Meta />
 
             <main className={styles.main}>
+                <Header />
                 <h1 className={styles.title}>
-                    Welcome to <a href="https://nextjs.org">Next.js!</a>
+                    Welcome to <a href="https://nextjs.org">my portfolio!</a>
                 </h1>
 
                 <p className={styles.description}>
-                    Get started by editing{' '}
-                    <code className={styles.code}>pages/index.tsx</code>
+                    This website is currently: {' '}
+                    <code className={styles.code}>under development</code>
                 </p>
 
                 <div className={styles.grid}>
-                    <a href="https://nextjs.org/docs" className={styles.card}>
-                        <h2>Documentation &rarr;</h2>
-                        <p>Find in-depth information about Next.js features and API.</p>
+                    <a href="https://github.com/Ascendus/" className={styles.card}>
+                        <h2>GitHub &rarr;</h2>
+                        <p>View my work, repositories and organisations on GitHub.</p>
                     </a>
 
                     <a href="https://nextjs.org/learn" className={styles.card}>
