@@ -1,4 +1,4 @@
-import { Head, Image } from "../structures/NextComponents";
+import { Fragment } from "react";
 import { Header } from "../components/Header";
 import { Meta } from "../components/Meta";
 import type { NextPage } from "next";
@@ -7,14 +7,14 @@ import styles from "../styles/App.module.scss";
 
 const Home: NextPage = () => {
     return (
-        <div className={styles.container}>
+        <Fragment>
             <Meta />
 
-            <main className={styles.main}>
+            <main>
                 <Header />
             </main>
-        </div>
-    )
+        </Fragment>
+    );  
 }
 
 export default Home
