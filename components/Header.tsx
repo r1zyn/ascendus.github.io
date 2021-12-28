@@ -1,5 +1,4 @@
-import { Bars } from "./Bars";
-import type { CSSProperties } from "react";
+import { Character } from "./Character";
 import { Nav } from "./Nav";
 import type { NextComponent } from "../structures/Types";
 
@@ -9,11 +8,28 @@ export const Header: NextComponent = () => {
     return (
         <div className={styles["header-container"]}>
             <Nav />
+
             <div className={styles["header-container-content"]}>
-                <Bars className={styles["header-bars"]} />
-                <div className={styles["header-items"]}>
-                    <h1 className={styles["header-title"]}>Imagining great things.</h1>
-                    <p className={styles["header-text"]}>Hey there, I&apos;m Ascendus, a full-stack website, application and partial game developer.</p>
+                <div className={styles["header-title-container"]}>
+                    <h1 className={styles["header-title-first"]}>Ascendus</h1>
+                    <h1 className={styles["header-title-second"]}>Ascendus</h1>
+                    <h1 className={styles["header-title-third"]}>Ascendus</h1>
+                    <h1 className={styles["header-title-fourth"]}>Ascendus</h1>
+                    <h1 className={styles["header-title-fifth"]}>Ascendus</h1>
+                </div>
+                
+                <div className={styles["header-info-container"]}>
+                    <span className={styles["header-info-header"]}>
+                        Developer
+                        &nbsp;
+                        &nbsp;
+                        ⎯⎯⎯⎯⎯⎯
+                    </span>
+
+                    <h2 className={styles["header-info-subheader"]}>I<Character unicode={"'"} />m a full-stack web, application and Discord bot developer.</h2>
+                    <p className={styles["header-info-text"]}>
+                        I<Character unicode={"'"} />ve had experience with full-stack web <Character unicode={"("} />including web design and API development<Character unicode={")"} />, Discord bot development, application development and some game developed over the past two years.
+                    </p>
                 </div>
             </div>
         </div>

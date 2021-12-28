@@ -1,5 +1,6 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
+import { Bars } from "../components/Bars";
 import { Dispatch, Fragment, SetStateAction } from "react";
 import { Loader } from "../components/Loader";
 
@@ -31,6 +32,7 @@ function App({ Component, pageProps, router }: AppProps): JSX.Element {
         <Fragment>
             <Loader isLoading={isLoading} />
             <Component {...pageProps} />
+            <Bars className="bars" />
         </Fragment>
     );
 }

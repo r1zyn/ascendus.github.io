@@ -4,6 +4,10 @@ export interface BarsOptions {
     className?: string | undefined;
 };
 
+export interface CharacterOptions {
+    unicode: string;
+};
+
 export interface MetaDataOptions {
     MetaTitle: string;
     MetaDescription: string;

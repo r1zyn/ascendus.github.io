@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap");  
 
+.container {
+    padding: 0 2rem;
+}
+
+.main {
+    min-height: 100vh;
+    padding: 4rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav-sticky {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -11,7 +25,6 @@
     transition: 700ms ease-in-out;
     text-align: center;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    background-color: var(--tertiary);
     width: 100%;
 }
 
@@ -25,14 +38,13 @@
     position: fixed;
     transition: 700ms ease-in-out;
     text-align: center;
-    background: transparent;
     width: 100%;
 }
 
 .nav-header {
     font-size: 1.875rem;
     line-height: 2.25rem;
-	font-weight: 700;
+	font-weight: 700;   
     line-height: 1;
 }
 
@@ -62,6 +74,8 @@
     display: flex;
     align-items: center;
     color: var(--tertiary);
+    background: none;
+    border: none;
     padding: 0.75rem;
 }
 
@@ -223,6 +237,16 @@
     text-align: center;
 }
 
+@media (max-width: 1024px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-sticky {
+        height: 5rem;
+    }
+}
+
 @media (min-width: 1024px) {
     .nav-title {
         display: inline-block;
@@ -268,59 +292,141 @@
     top: 0;
     left: 0;
     position: absolute;
-    min-height: 80vh;
+    min-height: 100vh;
     width: 100%;
-    background: no-repeat;
-    background-image: url("../public/assets/img/qzFkzdkDGTdIEuy5qY9h.svg");
     background-position: center;
     font-size: 1.5rem;
     font-weight: bolder;
+    background: var(--_primary);
+}
+
+.header-title-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header-title-first {
+    color: white;
+    font-family: "Montserrat-700";
+    font-size: 7rem;
+    z-index: 5;
+}
+
+.header-title-second {
+    color: rgb(209, 207, 207);
+    font-family: "Montserrat-700";
+    font-size: 7rem;
+    top: -15rem;
+    position: relative;
+    z-index: 4;
+}
+
+.header-title-third {
+    color: rgb(162, 162, 162);
+    font-family: "Montserrat-700";
+    font-size: 7rem;
+    top: -30rem;
+    position: relative;
+    z-index: 3;
+}
+
+
+.header-title-fourth {
+    color: rgb(117, 116, 116);
+    font-family: "Montserrat-700";
+    font-size: 7rem;
+    top: -45rem;
+    position: relative;
+    z-index: 2;
+}
+
+.header-title-fifth {
+    color: rgb(66, 65, 65);
+    font-family: "Montserrat-700";
+    font-size: 7rem;
+    top: -60rem;
+    position: relative;
+    z-index: 1;
 }
 
 .header-container-content {
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
     display: flex;
     flex-direction: row;
-}
-
-.header-title {
-    color: var(--tertiary);
-    font-size: 3.5rem;
-}
-
-.header-bars {
-    height: 25vh;
+    width: 100%;
+    column-gap: 7rem;
+    left: 50%;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    left: 1rem;
+    transform: translateY(-15%) translateX(-40%);
 }
 
-.header-items {
+.header-info-container {
     display: flex;
     flex-direction: column;
-    column-gap: -2rem;
-    margin-left: 3rem;
-    width: 70%;
+    margin-top: 9%;
+    width: 25%;
 }
 
-.header-text {
+.header-info-header {
+    color: var(--_secondary);
+    font-size: 0.7rem;
+}
+
+.header-info-subheader {
     color: white;
     font-size: 1.5rem;
 }
 
-.container {
-    padding: 0 2rem;
+.header-info-text {
+    color: var(--_tertiary);
+    font-size: 0.75rem;
 }
 
-.main {
-    min-height: 100vh;
-    padding: 4rem 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+@media (max-width: 640px) {
+    .header-container {
+        height: max-content;
+    }
+
+    .header-container-content {
+        flex-wrap: wrap;
+    }
+
+    .header-info-container {
+        margin-top: -160%;
+        width: 85%;
+        left: 50%;
+        transform: translateX(5%);
+        line-height: 1.3rem;
+    }
+
+    .header-title-container {
+        left: 50%;
+        transform: translateX(-60%) translateY(-15%);
+    }
+    
+    .header-title-first {
+        font-size: 3rem;
+        top: 0;
+    }
+
+    .header-title-second {
+        font-size: 3rem;
+        top: -6.2rem;
+    }
+
+    .header-title-third {
+        font-size: 3rem;
+        top: -12.4rem;
+    }
+
+    .header-title-fourth {
+        font-size: 3rem;
+        top: -18.6rem;
+    }
+
+    .header-title-fifth {
+        font-size: 3rem;
+        top: -24.8rem;
+    }
+};

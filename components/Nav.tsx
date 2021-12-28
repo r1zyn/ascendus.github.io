@@ -9,18 +9,18 @@ import styles from "../styles/App.module.scss";
 export const Nav: NextComponentType = () => {
     const [hasMounted, setMounted]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false) as [boolean, Dispatch<SetStateAction<boolean>>];
     const [isMobile, toggleMobile]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false) as [boolean, Dispatch<SetStateAction<boolean>>];
-    const [_position, setPosition]: [number, Dispatch<SetStateAction<number>>] = useState(0);
+    const [position, setPosition]: [number, Dispatch<SetStateAction<number>>] = useState(0);
 
     useEffect((): void => {
         document.addEventListener("scroll", (_e: Event): void => {
-            setPosition(document.body.scrollTop);
+            setPosition(document.body.scrollTop || document.documentElement.scrollTop);
         });
 
         setMounted(true);
     }, []);
 
     const navStyle: string = hasMounted && !isMobile ?
-        document.body.scrollTop > 1 || document.documentElement.scrollTop > 1 ?
+        position > 1 ?
             styles["nav-sticky"]
             : styles["nav-stationary"]
         : styles["nav-stationary"];
