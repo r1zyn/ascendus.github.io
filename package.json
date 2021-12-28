@@ -1,6 +1,6 @@
 {
     "name": "portfolio",
-    "description": "A website portfolio about me written in TypeScript (TSX) and SCSS with NextJS.",
+    "description": "My website portfolio written in TypeScript (TSX) and SCSS with NextJS.",
     "version": "1.0.0",
     "main": "pages/_app.tsx",
     "scripts": {
