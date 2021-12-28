@@ -53,8 +53,8 @@ export const Nav: NextComponentType = () => {
 
                     <ul className={styles["nav-links"]}>
                         <li>
-                            <Link href="/" passHref>
-                                <a className={styles["nav-link"]}>
+                            <Link href="/#header" passHref>
+                                <a className={styles["nav-link-active"]}>
                                     Home
                                 </a>
                             </Link>

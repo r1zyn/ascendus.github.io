@@ -6,7 +6,7 @@ import styles from "../styles/App.module.scss";
 
 export const Header: NextComponent = () => {
     return (
-        <div className={styles["header-container"]}>
+        <div className={styles["header-container"]} id="header">
             <Nav />
 
             <div className={styles["header-container-content"]}>

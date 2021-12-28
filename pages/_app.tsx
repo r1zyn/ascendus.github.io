@@ -12,8 +12,8 @@ function App({ Component, pageProps, router }: AppProps): JSX.Element {
 
     const handleComplete = (): void => {
         setTimeout((): void => {
-            setLoading(false);
-        }, 3000)
+            return setLoading(false);
+        }, 5000)
     };
 
     useEffect((): (() => void) => {
@@ -30,9 +30,12 @@ function App({ Component, pageProps, router }: AppProps): JSX.Element {
 
     return (
         <Fragment>
-            <Loader isLoading={isLoading} />
-            <Component {...pageProps} />
-            <Bars className="bars" />
+            {
+                isLoading ? <Loader isLoading={isLoading} /> : <>
+                    <Component {...pageProps} />
+                    <Bars className="bars" />
+                </>
+            }
         </Fragment>
     );
 }
