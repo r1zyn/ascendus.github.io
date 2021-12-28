@@ -23,7 +23,7 @@ export const Header: NextComponent = () => {
                         Developer
                         &nbsp;
                         &nbsp;
-                        ⎯⎯⎯⎯⎯⎯
+                        ⎯⎯⎯⎯⎯⎯⎯⎯⎯
                     </span>
 
                     <h2 className={styles["header-info-subheader"]}>I<Character unicode={"'"} />m a full-stack web, application and Discord bot developer.</h2>
