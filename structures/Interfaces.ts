@@ -8,6 +8,12 @@ export interface CharacterOptions {
     unicode: string;
 };
 
+export interface ImageLoaderOptions {
+    src: string;
+    width: number;
+    quality?: number;
+}
+
 export interface MetaDataOptions {
     MetaTitle: string;
     MetaDescription: string;

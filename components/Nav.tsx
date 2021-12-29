@@ -4,6 +4,7 @@ import { Image } from "../structures/NextComponents";
 import { Link } from "../structures/NextComponents";
 import type { NextComponentType } from "next";
 
+import loader from "../structures/functions/Loader";
 import styles from "../styles/App.module.scss";
 
 export const Nav: NextComponentType = () => {
@@ -32,7 +33,7 @@ export const Nav: NextComponentType = () => {
                     <div className={styles["nav-header"]} style={{ zIndex: 2000 }}>
                         <Link href="/" passHref>
                             <a>
-                                <Image className={styles["nav-icon"]} src={Icon} alt="Ascendus's logo" height={45} width={45} />
+                                <Image className={styles["nav-icon"]} src={Icon} alt="Ascendus's logo" height={45} width={45} loader={loader} />
                             </a>
                         </Link>
 
@@ -101,7 +102,7 @@ export const Nav: NextComponentType = () => {
                         <div className={styles["nav-menu-header"]}>
                             <Link href="/" passHref>
                                 <a className={styles["nav-menu-icon"]}>
-                                    <Image src={Icon} alt="Ascendus's logo" height={45} width={45} />
+                                    <Image src={Icon} alt="Ascendus's logo" height={45} width={45} loader={loader} />
                                 </a>
                             </Link>
                             <button className="navbar-close" onClick={(): void => toggleMobile(!isMobile)}>
