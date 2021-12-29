@@ -12,11 +12,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "+https://github.com/Ascendus/Portfolio.git"
+        "url": "+https://github.com/Ascendus/ascendus.github.io"
     },
-    "author": "Ascendus",
+    "author": "Ascendus <ascendus.dev@gmail.com>",
     "bugs": {
-        "url": "https://github.com/Ascendus/Portfolio.git",
+        "url": "https://github.com/Ascendus/ascendus.github.io",
         "email": "ascendus.dev@gmail.com"
     },
     "contributors": [

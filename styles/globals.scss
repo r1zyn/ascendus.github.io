@@ -498,6 +498,7 @@
     --_primary: #222222;
     --_secondary: #F26C4F;
     --_tertiary: #898991;
+    --_extra: #1F1F1F;
     --primary: #2f3136;
     --secondary: #7289da;
     --tertiary: #ffffff;
@@ -533,4 +534,10 @@ a {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+@media (max-width: 640px) {
+    .bars {
+        display: none;
+    }
 }

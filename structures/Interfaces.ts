@@ -15,7 +15,7 @@ export interface MetaDataOptions {
     MetaColor: string;
     MetaFavicon: string;
     MetaFaviconType: string;
-}
+};
 
 export interface LoaderOptions {
     isLoading: boolean;

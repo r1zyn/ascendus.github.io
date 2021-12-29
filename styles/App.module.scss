@@ -11,8 +11,11 @@
     transition: 700ms ease-in-out;
     text-align: center;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    width: 100%;
-    margin-top: 1rem;
+    width: 100vw;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+    background-color: var(--_primary);
 }
 
 .nav-stationary {
@@ -25,8 +28,10 @@
     position: fixed;
     transition: 700ms ease-in-out;
     text-align: center;
-    width: 100%;
-    margin-top: 1rem;
+    width: 100vw;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
 }
 
 .nav-header {
@@ -288,17 +293,19 @@
 };
 
 .header-container {
-    min-height: 100vh;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     font-weight: bolder;
     background: var(--_primary);
     padding: 0;
+    overflow-x: hidden;
 }
 
 .header-title-container {
     display: flex;
     flex-direction: column;
     position: relative;
+    overflow-x: hidden;
 }
 
 .header-title-first {
@@ -348,12 +355,11 @@
 .header-container-content {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 100vw;
     column-gap: 7rem;
     left: 50%;
-    position: absolute;
     top: 50%;
-    transform: translateY(-15%) translateX(-40%);
+    transform: translateX(10%) translateY(5%);
 }
 
 .header-info-container {
@@ -361,21 +367,25 @@
     flex-direction: column;
     margin-top: 9%;
     width: 25%;
+    overflow-x: hidden;
 }
 
 .header-info-header {
     color: var(--_secondary);
     font-size: 0.7rem;
+    overflow-x: hidden;
 }
 
 .header-info-subheader {
     color: white;
     font-size: 1.5rem;
+    overflow-x: hidden;
 }
 
 .header-info-text {
     color: var(--_tertiary);
     font-size: 0.75rem;
+    overflow-x: hidden;
 }
 
 @media (max-width: 640px) {
@@ -388,7 +398,7 @@
     }
 
     .header-info-container {
-        margin-top: -160%;
+        margin-top: -100%;
         width: 85%;
         left: 50%;
         transform: translateX(5%);
@@ -397,7 +407,7 @@
 
     .header-title-container {
         left: 50%;
-        transform: translateX(-60%) translateY(-20%);
+        transform: translateX(-60%) translateY(10%);
     }
     
     .header-title-first {
@@ -425,3 +435,7 @@
         top: -24.8rem;
     }
 };
+
+.section-one-container {
+    background-color: var(--_extra);
+}
