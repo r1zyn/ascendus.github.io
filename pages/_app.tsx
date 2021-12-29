@@ -19,9 +19,15 @@ function App({ Component, pageProps, router }: AppProps): JSX.Element {
 
     return (
         <Fragment>
-            <Loader isLoading={isLoading} />
-            <Component {...pageProps} />
-            <Bars className="bars" />
+            {
+                isLoading ?
+                    <Loader isLoading={isLoading} />
+                    :
+                    <Fragment>
+                        <Component {...pageProps} />
+                        <Bars className="bars" />
+                    </Fragment>
+            }
         </Fragment>
     );
 }

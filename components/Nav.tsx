@@ -12,12 +12,20 @@ export const Nav: NextComponentType = () => {
     const [isMobile, toggleMobile]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false) as [boolean, Dispatch<SetStateAction<boolean>>];
     const [position, setPosition]: [number, Dispatch<SetStateAction<number>>] = useState(0);
 
-    useEffect((): void => {
+    useEffect((): (() => void) => {
         document.addEventListener("scroll", (_e: Event): void => {
             setPosition(document.body.scrollTop || document.documentElement.scrollTop);
         });
 
         setMounted(true);
+
+        return (): void => {
+            document.addEventListener("scroll", (_e: Event): void => {
+                setPosition(document.body.scrollTop || document.documentElement.scrollTop);
+            });
+    
+            setMounted(true);
+        }
     }, []);
 
     const navStyle: string = hasMounted && !isMobile ?
@@ -61,28 +69,28 @@ export const Nav: NextComponentType = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="about" passHref>
+                            <Link href="/#about" passHref>
                                 <a className={styles["nav-link"]}>
                                     About
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="applications" passHref>
+                            <Link href="/#applications" passHref>
                                 <a className={styles["nav-link"]}>
                                     Applications
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="partners" passHref>
+                            <Link href="/#partners" passHref>
                                 <a className={styles["nav-link"]}>
                                     Partners
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="resources" passHref>
+                            <Link href="/#resources" passHref>
                                 <a className={styles["nav-link"]}>
                                     Resources
                                 </a>
