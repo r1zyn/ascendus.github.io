@@ -13,7 +13,7 @@ const Home: NextPage = () => {
 
             <main>
                 <Header />
-                {/*
+                {
                     <div className={styles["section-one-container"]} id="about">
                         <div className={styles["header-info-container"]}>
                             <span className={styles["header-info-header"]}>
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
                             </p>
                         </div>
                     </div>
-                */}
+                }
             </main>
         </Fragment>
     );

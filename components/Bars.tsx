@@ -1,10 +1,11 @@
 import { BarsOptions } from "../structures/Interfaces";
+import { Link } from "../structures/NextComponents";
 import type { NextComponent } from "../structures/Types";
 
 import { useEffect } from "react";
 
 export const Bars: NextComponent<BarsOptions> = ({ className }: BarsOptions) => {
-    useEffect((): void  => {
+    useEffect(() => {
         const rectangleOne: HTMLElement = document.getElementById("rectangle-one") as HTMLElement;
         const rectangleTwo: HTMLElement = document.getElementById("rectangle-two") as HTMLElement;
         const rectangleThree: HTMLElement = document.getElementById("rectangle-three") as HTMLElement;
@@ -13,7 +14,6 @@ export const Bars: NextComponent<BarsOptions> = ({ className }: BarsOptions) => 
         const about: HTMLElement = document.getElementById("about") as HTMLElement;
 
         const bars: HTMLElement[] = [rectangleOne, rectangleTwo, rectangleThree];
-
         bars.forEach((bar: HTMLElement): void => {
             bar.addEventListener("click", (_event: MouseEvent): void => {
                 switch (bar.id) {
