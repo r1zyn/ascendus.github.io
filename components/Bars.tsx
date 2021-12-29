@@ -17,16 +17,14 @@ export const Bars: NextComponent<BarsOptions> = ({ className }: BarsOptions) => 
         bars.forEach((bar: HTMLElement): void => {
             bar.addEventListener("click", (_event: MouseEvent): void => {
                 switch (bar.id) {
-                    case "rectangle-one":
-                        window.scrollTo({
-                            top: header.scrollTop,
+                    case "rectangle-one":           
+                        header.scrollIntoView({
                             behavior: "smooth"
-                        });
+                        })
                         break;
 
                     case "rectangle-two": 
-                        window.scrollTo({
-                            top: about.scrollTop,
+                        about.scrollIntoView({
                             behavior: "smooth"
                         });
                         break;
