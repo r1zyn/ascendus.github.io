@@ -1,9 +1,9 @@
-import type { LoaderOptions } from "../structures/Interfaces";
+import type { LoaderProps } from "../structures/Interfaces";
 import type { NextComponent } from "../structures/Types";
 
 import styles from "../styles/Loader.module.scss";
 
-export const Loader: NextComponent<LoaderOptions> = ({ isLoading }: LoaderOptions) => {
+export const Loader: NextComponent<LoaderProps> = ({ isLoading }: LoaderProps) => {
     return (
         <div className={isLoading ? styles["background"] : styles["hidden"]}>
             <div className={isLoading ? styles["loader"] : styles["hidden"]}>

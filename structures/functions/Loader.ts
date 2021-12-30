@@ -1,7 +1,7 @@
 import { ImageLoader } from "next/image";
-import { ImageLoaderOptions } from "../Interfaces";
+import { ImageLoaderProps } from "../Interfaces";
 
-const Loader: ImageLoader = ({ src, width, quality }: ImageLoaderOptions) => {
+const Loader: ImageLoader = ({ src, width, quality }: ImageLoaderProps) => {
     if (typeof window !== "undefined") {
         if (window.location.hostname === "localhost") {
             return `http://localhost:3000${src}?w=${width}&q=${quality || 75}` as string;

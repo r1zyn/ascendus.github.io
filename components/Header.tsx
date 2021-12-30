@@ -11,23 +11,23 @@ export const Header: NextComponent = () => {
 
             <div className={styles["header-container-content"]}>
                 <div className={styles["header-title-container"]}>
-                    <h1 className={styles["header-title-first"]}>Ascendus</h1>
-                    <h1 className={styles["header-title-second"]}>Ascendus</h1>
-                    <h1 className={styles["header-title-third"]}>Ascendus</h1>
-                    <h1 className={styles["header-title-fourth"]}>Ascendus</h1>
-                    <h1 className={styles["header-title-fifth"]}>Ascendus</h1>
+                    <h1 className={`${styles["header-title-first"]} text`}>Ascendus</h1>
+                    <h1 className={`${styles["header-title-second"]} text`}>Ascendus</h1>
+                    <h1 className={`${styles["header-title-third"]} text`}>Ascendus</h1>
+                    <h1 className={`${styles["header-title-fourth"]} text`}>Ascendus</h1>
+                    <h1 className={`${styles["header-title-fifth"]} text`}>Ascendus</h1>
                 </div>
                 
                 <div className={styles["header-info-container"]}>
-                    <span className={styles["header-info-header"]}>
+                    <span className={`${styles["header-info-header"]} text`}>
                         Developer
                         &nbsp;
                         &nbsp;
                         ⎯⎯⎯⎯⎯⎯⎯⎯⎯
                     </span>
 
-                    <h2 className={styles["header-info-subheader"]}>I<Character unicode={"'"} />m a full-stack web, application and Discord bot developer.</h2>
-                    <p className={styles["header-info-text"]}>
+                    <h2 className={`${styles["header-info-subheader"]} text`}>I<Character unicode={"'"} />m a full-stack web, application and Discord bot developer.</h2>
+                    <p className={`${styles["header-info-text"]} text`}>
                         I<Character unicode={"'"} />ve had experience with full-stack web <Character unicode={"("} />including web design and API development<Character unicode={")"} />, Discord bot development, application development and some game developed over the past two years.
                     </p>
                 </div>

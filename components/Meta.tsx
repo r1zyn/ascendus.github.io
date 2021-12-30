@@ -1,4 +1,4 @@
-import { Head } from "../structures/NextComponents";
+import { Head } from "./BaseComponents";
 import { MetaData } from "../structures/Constants";
 import type { NextComponent } from "../structures/Types";
 import { URL } from "../structures/Constants";

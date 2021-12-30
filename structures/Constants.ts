@@ -1,6 +1,6 @@
 import { MetaDataOptions } from "./Interfaces";
 
-export const Icon: string = "/assets/img/afb9f72545ce10d34cbdefbc2b805fe1.png";
+export const Icon: string = "/assets/img/afb9f72545ce10d34cbdefbc2b805fe1-transparent.png";
 
 const MetaTitle: string = "Ascendus | Imagining Great Things.";
 const MetaDescription: string = "Hey there. I'm Ascendus, a full-stack web, application and partial game developer. Welcome to my portfolio, where you'll learn more about me, my experience, projects (past and present), languages, frameworks & software and much more.";

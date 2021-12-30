@@ -1,14 +1,14 @@
-import { CSSProperties } from "react";
+import { Dispatch, SetStateAction } from "react";
 
-export interface BarsOptions {
+export interface BarsProps {
     className?: string | undefined;
 };
 
-export interface CharacterOptions {
+export interface CharacterProps {
     unicode: string;
 };
 
-export interface ImageLoaderOptions {
+export interface ImageLoaderProps {
     src: string;
     width: number;
     quality?: number;
@@ -23,6 +23,18 @@ export interface MetaDataOptions {
     MetaFaviconType: string;
 };
 
-export interface LoaderOptions {
+export interface LoaderProps {
     isLoading: boolean;
 };
+
+export interface SearchBarProps {
+    height?: string | number;
+    width?: string | number;
+    color?: string;
+    className?: string;
+};
+
+export interface SearchModalProps {
+    openModal: boolean;
+    toggleModal: Dispatch<SetStateAction<boolean>>;
+}
