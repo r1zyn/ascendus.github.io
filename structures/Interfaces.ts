@@ -37,4 +37,9 @@ export interface SearchBarProps {
 export interface SearchModalProps {
     openModal: boolean;
     toggleModal: Dispatch<SetStateAction<boolean>>;
-}
+};
+
+export interface TextElement {
+    id: string;
+    text: string;
+};

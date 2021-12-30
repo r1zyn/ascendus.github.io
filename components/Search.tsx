@@ -8,31 +8,20 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import styles from "../styles/App.module.scss";
 import { SearchModal } from "./SearchModal";
 
-export const SearchBar: NextComponent<SearchBarProps> = ({ height, width, color, className }: SearchBarProps) => {
+export const Search: NextComponent<SearchBarProps> = ({ height, width, color, className }: SearchBarProps) => {
     const [openModal, toggleModal]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false) as [boolean, Dispatch<SetStateAction<boolean>>];
     
-    SearchBar.prototype.toggleModal = toggleModal;
+    useEffect((): void => {
+        document.addEventListener("keydown", (event: KeyboardEvent): boolean | void => {
+            if (event.key === "Escape" && openModal) toggleModal(false);
+            if (event.ctrlKey && event.key === "k") {
+                toggleModal(!openModal);
+                event.preventDefault();
+                return false;
+            };
 
-    useEffect((): (() => void) => {
-        const overlay: HTMLElement = document.getElementById("overlay") as HTMLElement;
-
-        overlay.addEventListener("click", (_event: MouseEvent): void => {
-            if (openModal) return toggleModal(false);
+            // Use collection for cooldowns
         });
-
-        document.addEventListener("keydown", (event: KeyboardEvent): void => {
-            if (event.key === "Escape" && openModal) return toggleModal(false);
-        });
-
-        return () => {
-            overlay.addEventListener("click", (_event: MouseEvent): void => {
-                if (openModal) return toggleModal(false);
-            });
-
-            document.addEventListener("keydown", (event: KeyboardEvent): void => {
-                if (event.key === "Escape" && openModal) return toggleModal(false);
-            });
-        };
     }, [openModal]);
 
     return (

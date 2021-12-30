@@ -4,7 +4,7 @@ import { Icon } from "../structures/Constants";
 import { Image } from "./BaseComponents";
 import { Link } from "./BaseComponents";
 import type { NextComponentType } from "next";
-import { SearchBar } from "./SearchBar";    
+import { Search } from "./Search";    
 
 import loader from "../structures/functions/Loader";
 import styles from "../styles/App.module.scss";
@@ -90,7 +90,7 @@ export const Nav: NextComponentType = () => {
                     </ul>
 
                     <div className={styles["nav-right-container"]}>
-                        <SearchBar color="#898991" className={styles["search-bar-button"]} />
+                        <Search color="#898991" className={styles["search-bar-button"]} />
 
                         <button className={styles["nav-menu-button"]} onClick={(): void => toggleMobile(!isMobile)}>
                             <svg className={styles["nav-menu-icon"]} viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
