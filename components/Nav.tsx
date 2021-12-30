@@ -52,6 +52,7 @@ export const Nav: NextComponentType = () => {
                     </div>
 
                     <ul className={styles["nav-links"]}>
+                        {/* Add click events for smooth scrolling to sections */}
                         <li>
                             <Link href="/#header" passHref>
                                 <a className={`${styles["nav-link-active"]} text`}>

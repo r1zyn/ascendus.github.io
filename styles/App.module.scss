@@ -539,8 +539,13 @@
     margin-left: 10rem;
 }
 
+.section-one-content {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
 .section-one-info-header {
-    margin-top: 7rem;
     color: var(--_secondary);
     font-size: 0.7rem;
     overflow-x: hidden;
