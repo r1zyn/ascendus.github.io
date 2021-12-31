@@ -1,32 +1,46 @@
 import { Dispatch, Fragment, SetStateAction, useState, useEffect } from "react";
-import { Head } from "./BaseComponents";
-import { Icon } from "../structures/Constants";
-import { Image } from "./BaseComponents";
-import { Link } from "./BaseComponents";
+import { Icon, Links } from "../structures/Constants";
+import { Head, Image, Link, Loader } from "./BaseComponents";
+import type { NavLinks } from "../structures/Interfaces";
 import type { NextComponentType } from "next";
-import { Search } from "./Search";    
+import type { PageSection } from "../structures/Types";
+import { Search } from "./Search";
 
-import loader from "../structures/functions/Loader";
 import styles from "../styles/App.module.scss";
 
 export const Nav: NextComponentType = () => {
     const [hasMounted, setMounted]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false) as [boolean, Dispatch<SetStateAction<boolean>>];
     const [isMobile, toggleMobile]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false) as [boolean, Dispatch<SetStateAction<boolean>>];
     const [position, setPosition]: [number, Dispatch<SetStateAction<number>>] = useState(0);
+    const [section, setSection]: [PageSection, Dispatch<SetStateAction<PageSection>>] = useState("Home") as [PageSection, Dispatch<SetStateAction<PageSection>>];
+    const [navLinks, setNavLinks]: [NavLinks, Dispatch<SetStateAction<NavLinks>>] = useState({ scrollToHome: (): void => { }, scrollToAbout: (): void => { } }) as [NavLinks, Dispatch<SetStateAction<NavLinks>>];
 
-    useEffect((): (() => void) => {
-        document.addEventListener("scroll", (_e: Event): void => {
-            setPosition(document.body.scrollTop || document.documentElement.scrollTop);
+    useEffect((): void => {
+        const header: HTMLElement = document.getElementById("header") as HTMLElement;
+        const about: HTMLElement = document.getElementById("about") as HTMLElement;
+
+        setNavLinks({
+            scrollToHome: (): void => {
+                header.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+                setSection("Home");
+            },
+            scrollToAbout: (): void => {
+                about.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+                setSection("About");
+            }
         });
 
         setMounted(true);
 
-        return (): void => {
-            document.addEventListener("scroll", (_e: Event): void => {
-                setPosition(document.body.scrollTop || document.documentElement.scrollTop);
-            });
-            setMounted(true);
-        }
+        document.addEventListener("scroll", (_e: Event): void => {
+            setPosition(document.body.scrollTop || document.documentElement.scrollTop);
+        });
     }, []);
 
     const navStyle: string = hasMounted && !isMobile ?
@@ -46,7 +60,7 @@ export const Nav: NextComponentType = () => {
                     <div className={styles["nav-header"]} style={{ zIndex: 197 }}>
                         <Link href="/" passHref>
                             <a className={styles["nav-icon-section"]}>
-                                <Image className={styles["nav-icon"]} src={Icon} alt="Ascendus's logo" height={45} width={45} loader={loader} />
+                                <Image className={styles["nav-icon"]} src={Icon} alt="Ascendus's logo" height={45} width={45} loader={Loader} />
                             </a>
                         </Link>
                     </div>
@@ -54,18 +68,14 @@ export const Nav: NextComponentType = () => {
                     <ul className={styles["nav-links"]}>
                         {/* Add click events for smooth scrolling to sections */}
                         <li>
-                            <Link href="/#header" passHref>
-                                <a className={`${styles["nav-link-active"]} text`}>
-                                    Home
-                                </a>
-                            </Link>
+                            <a className={section === "Home" ? `${styles["nav-link-active"]} text` : `${styles["nav-link"]} text`} id="home-link" onClick={(): void => navLinks["scrollToHome"]()}>
+                                Home
+                            </a>
                         </li>
                         <li>
-                            <Link href="/#about" passHref>
-                                <a className={`${styles["nav-link"]} text`}>
-                                    About
-                                </a>
-                            </Link>
+                            <a className={section === "About" ? `${styles["nav-link-active"]} text` : `${styles["nav-link"]} text`} id="about-link" onClick={(): void => navLinks["scrollToAbout"]()}>
+                                About
+                            </a>
                         </li>
                         <li>
                             <Link href="/#applications" passHref>
@@ -108,7 +118,7 @@ export const Nav: NextComponentType = () => {
                         <div className={styles["nav-menu-header"]}>
                             <Link href="/" passHref>
                                 <a className={styles["nav-icon-container"]}>
-                                    <Image className={styles["nav-icon"]} src={Icon} alt="Ascendus's logo" height={45} width={45} loader={loader} />
+                                    <Image className={styles["nav-icon"]} src={Icon} alt="Ascendus's logo" height={45} width={45} loader={Loader} />
                                 </a>
                             </Link>
                             <button className={styles["nav-menu-close-container"]} onClick={(): void => toggleMobile(!isMobile)}>
@@ -121,19 +131,15 @@ export const Nav: NextComponentType = () => {
                         <div>
                             <ul>
                                 <li className="mb-1">
-                                    <Link href="/" passHref>
-                                        <a className={styles["nav-link"]}>
-                                            Home
-                                        </a>
-                                    </Link>
+                                    <a className={section === "Home" ? `${styles["nav-link-active"]} text` : `${styles["nav-link"]} text`} id="home-link" onClick={(): void => navLinks["scrollToHome"]()}>
+                                        Home
+                                    </a>
                                 </li>
                                 <br />
                                 <li className="mb-1">
-                                    <Link href="/" passHref>
-                                        <a className={styles["nav-link"]}>
-                                            About
-                                        </a>
-                                    </Link>
+                                    <a className={section === "About" ? `${styles["nav-link-active"]} text` : `${styles["nav-link"]} text`} id="about-link" onClick={(): void => navLinks["scrollToAbout"]()}>
+                                        About
+                                    </a>
                                 </li>
                                 <br />
                                 <li className="mb-1">
@@ -163,11 +169,7 @@ export const Nav: NextComponentType = () => {
                         </div>
 
                         <div className={styles["nav-menu-bottom"]}>
-                            <div className={styles["nav-menu-contact-container"]}>
-                                <a className={`${styles["nav-menu-contact-button"]} text`}>Contact</a>
-                            </div>
-
-                            {/* Social Links */}
+                            {/* Social Links Note: Added SVG so they load when no wifi */}
                             <div className={`${styles["nav-menu-socials"]} text`}>
                                 <a href="https://twitter.com/MatrixDevelopm3" target="_blank" rel="noreferrer">
                                     <button className={styles["twitter"]} type="button">
@@ -184,7 +186,7 @@ export const Nav: NextComponentType = () => {
                                         <i className="fab fa-instagram"></i>
                                     </button>
                                 </a>
-                                <a href="https://github.com/MatrixDevelopment-GH" target="_blank" rel="noreferrer">
+                                <a href={Links["github"]} target="_blank" rel="noreferrer">
                                     <button className={styles["github"]} type="button">
                                         <i className="fab fa-github"></i>
                                     </button>

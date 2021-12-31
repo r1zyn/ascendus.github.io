@@ -1,4 +1,4 @@
-import { MetaDataOptions } from "./Interfaces";
+import { MetaDataOptions, Links as _Links } from "./Interfaces";
 
 export const Icon: string = "/assets/img/afb9f72545ce10d34cbdefbc2b805fe1-transparent.png";
 
@@ -16,6 +16,16 @@ export const MetaData: MetaDataOptions = {
     MetaColor: MetaColor,
     MetaFavicon: MetaFavicon,
     MetaFaviconType: MetaFaviconType
-}
+};
 
-export const URL: string = "https://ascendus.dev/";
+export const URL: string = "https://ascendus.github.io/";
+
+export const Links: _Links = {
+    website: URL,
+    github: "https://github.com/Ascendus/",
+    discord: "https://discord.com/users/",
+    bio: "https://dsc.gg/Ascendus/",
+    astura: "https://discord.gg/",
+    matrix: "https://discord.gg/mtx",
+    email: "ascendus.dev@gmail.com"
+};

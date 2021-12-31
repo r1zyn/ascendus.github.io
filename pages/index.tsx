@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 import { Header } from "../components/Header";
+import { Icon } from "../structures/Constants";
+import { Image, Loader } from "../components/BaseComponents";
 import { Meta } from "../components/Meta";
 import type { NextPage } from "next";
 
@@ -29,6 +31,8 @@ const Home: NextPage = () => {
                                 </p>
                             </div>
                         </div>
+
+                        <Image src={Icon} alt="Image of Ascendus" loader={Loader} height={150} width={150} />
                     </div>
                 }
             </main>

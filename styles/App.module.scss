@@ -133,11 +133,16 @@
     transform: translateY(-50%) translateX(-50%);
 }
 
+.nav-link:hover {
+    color: var(--_secondary);
+}
+
 .nav-link {
     color: var(--tertiary);
     font-size: 0.675rem;
     line-height: 1.25rem;
     letter-spacing: 0.1rem;
+    cursor: pointer;
 }
 
 .nav-link-active {
@@ -145,6 +150,7 @@
     font-size: 0.675rem;
     line-height: 1.25rem;
     letter-spacing: 0.1rem;
+    cursor: pointer;
 }
 
 .nav-link-active:hover {
@@ -400,14 +406,14 @@
 
 .header-title-first {
     color: white;
-    font-family: "Montserrat-700";
+    font-family: "Montserrat-700", "Gilroy-Bold", sans-serif;
     font-size: 7rem;
     z-index: 5;
 }
 
 .header-title-second {
     color: rgb(209, 207, 207);
-    font-family: "Montserrat-700";
+    font-family: "Montserrat-700", "Gilroy-Bold", sans-serif;
     font-size: 7rem;
     top: -15rem;
     position: relative;
@@ -416,7 +422,7 @@
 
 .header-title-third {
     color: rgb(162, 162, 162);
-    font-family: "Montserrat-700";
+    font-family: "Montserrat-700", "Gilroy-Bold", sans-serif;
     font-size: 7rem;
     top: -30rem;
     position: relative;
@@ -426,7 +432,7 @@
 
 .header-title-fourth {
     color: rgb(117, 116, 116);
-    font-family: "Montserrat-700";
+    font-family: "Montserrat-700", "Gilroy-Bold", sans-serif;
     font-size: 7rem;
     top: -45rem;
     position: relative;
@@ -435,7 +441,7 @@
 
 .header-title-fifth {
     color: rgb(66, 65, 65);
-    font-family: "Montserrat-700";
+    font-family: "Montserrat-700", "Gilroy-Bold", sans-serif;
     font-size: 7rem;
     top: -60rem;
     position: relative;

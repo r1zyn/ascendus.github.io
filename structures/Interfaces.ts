@@ -12,7 +12,17 @@ export interface ImageLoaderProps {
     src: string;
     width: number;
     quality?: number;
-}
+};
+
+export interface Links {
+    website: string;
+    github: string;
+    discord: string;
+    bio: string;
+    astura: string;
+    matrix: string;
+    email: string;
+};
 
 export interface MetaDataOptions {
     MetaTitle: string;
@@ -21,6 +31,11 @@ export interface MetaDataOptions {
     MetaColor: string;
     MetaFavicon: string;
     MetaFaviconType: string;
+};
+
+export interface NavLinks {
+    scrollToHome: () => void;
+    scrollToAbout: () => void;
 };
 
 export interface LoaderProps {
