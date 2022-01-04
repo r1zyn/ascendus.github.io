@@ -1,13 +1,13 @@
 import type { AppProps } from "next/app";
 import { Bars } from "../components/Bars";
 import { Dispatch, Fragment, SetStateAction, useEffect, useState } from "react";
-import { DocSearch } from "@docsearch/react";
+// import { DocSearch } from "@docsearch/react";
 import { Loader } from "../components/Loader";
 
 import "../styles/globals.scss";
 // import "@docsearch/css";
 
-function App({ Component, pageProps, router }: AppProps): JSX.Element {
+function App({ Component, pageProps, /*router*/ }: AppProps): JSX.Element {
     const [isLoading, setLoading]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false) as [boolean, Dispatch<SetStateAction<boolean>>]
 
     useEffect((): (() => void) => {
