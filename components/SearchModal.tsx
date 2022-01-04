@@ -11,7 +11,7 @@ export const SearchModal: NextComponent<SearchModalProps> = ({ openModal, toggle
     useEffect((): void => {
         const searchBar: HTMLElement = document.getElementById("search-bar") as HTMLElement;
 
-        searchBar.addEventListener("input", (event: Event) => {
+        searchBar.addEventListener("input", (event: Event): void => {
             const elements: TextElement[] = [];
             document.querySelectorAll(".text").forEach((element: Element, _key: number, _parent: NodeListOf<Element>): void => {
                 elements.push({

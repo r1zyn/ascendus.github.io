@@ -10,14 +10,9 @@ import "../styles/globals.scss";
 function App({ Component, pageProps, /*router*/ }: AppProps): JSX.Element {
     const [isLoading, setLoading]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false) as [boolean, Dispatch<SetStateAction<boolean>>]
 
-    useEffect((): (() => void) => {
+    useEffect((): void => {
         setLoading(true)
-        setTimeout(() => setLoading(false), 5000);
-
-        return (): void => {
-            setLoading(true)
-            setTimeout(() => setLoading(false), 5000);
-        }
+        setTimeout((): void => setLoading(false), 5000);
     }, []);
 
     return (
