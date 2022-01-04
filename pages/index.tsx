@@ -32,7 +32,7 @@ const Home: NextPage = () => {
                             </div>
                         </div>
 
-                        <Image src={Icon} alt="Image of Ascendus" loader={Loader} height={150} width={150} />
+                        {/*<Image src={Icon} alt="Image of Ascendus" loader={Loader} height={150} width={150} />*/}
                     </div>
                 }
             </main>
