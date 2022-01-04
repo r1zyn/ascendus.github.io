@@ -1,6 +1,7 @@
 import { Head } from "./BaseComponents";
 import { MetaData } from "../structures/Constants";
 import type { NextComponent } from "../structures/Types";
+import { Script } from "./BaseComponents";
 import { URL } from "../structures/Constants";
 
 export const Meta: NextComponent = () => {
@@ -30,6 +31,8 @@ export const Meta: NextComponent = () => {
             <link rel="icon" type={MetaData["MetaFaviconType"]} href={MetaData["MetaFavicon"]} />
             <link rel="shortcut icon" type={MetaData["MetaFaviconType"]} href={MetaData["MetaFavicon"]} />
             <link rel="apple-touch-icon" type={MetaData["MetaFaviconType"]} href={MetaData["MetaFavicon"]} />
+
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         </Head>
     );
 }

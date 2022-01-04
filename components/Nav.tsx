@@ -15,7 +15,7 @@ export const Nav: NextComponentType = () => {
     const [section, setSection]: [PageSection, Dispatch<SetStateAction<PageSection>>] = useState("Home") as [PageSection, Dispatch<SetStateAction<PageSection>>];
     const [navLinks, setNavLinks]: [NavLinks, Dispatch<SetStateAction<NavLinks>>] = useState({ scrollToHome: (): void => { }, scrollToAbout: (): void => { } }) as [NavLinks, Dispatch<SetStateAction<NavLinks>>];
 
-    useEffect((): void => {
+    useEffect((): (() => void) => {
         const header: HTMLElement = document.getElementById("header") as HTMLElement;
         const about: HTMLElement = document.getElementById("about") as HTMLElement;
 
@@ -41,6 +41,12 @@ export const Nav: NextComponentType = () => {
         document.addEventListener("scroll", (_e: Event): void => {
             setPosition(document.body.scrollTop || document.documentElement.scrollTop);
         });
+
+        return (): void => {
+            setNavLinks({} as NavLinks);
+            setMounted(false);
+            setPosition(0);
+        }
     }, []);
 
     const navStyle: string = hasMounted && !isMobile ?

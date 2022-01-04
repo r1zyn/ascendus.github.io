@@ -1,5 +1,6 @@
 import { BarsProps } from "../structures/Interfaces";
 import type { NextComponent } from "../structures/Types";
+import { Util } from "../structures/functions/Utils";
 
 import { useEffect } from "react";
 
@@ -13,7 +14,7 @@ export const Bars: NextComponent<BarsProps> = ({ className }: BarsProps) => {
 
         const header: HTMLElement = document.getElementById("header") as HTMLElement;
         const about: HTMLElement = document.getElementById("about") as HTMLElement;
-
+        console.log(Util.elementIsInView(about));
         const homeLink: HTMLElement = document.getElementById("home-link") as HTMLElement;
         const aboutLink: HTMLElement = document.getElementById("about-link") as HTMLElement;
 
