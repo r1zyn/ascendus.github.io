@@ -26,7 +26,7 @@ export const SearchModal: NextComponent<SearchModalProps> = ({ openModal, toggle
                 };
             });
         });
-    }, []);
+    }, [searchResults]);
     return (
         <div className={openModal ? styles["search-modal"] : styles["hidden"]}>
             <button className={styles["overlay-close-button"]} onClick={(): void => toggleModal(!openModal)}>

@@ -32,7 +32,7 @@ export const Meta: NextComponent = () => {
             <link rel="shortcut icon" type={MetaData["MetaFaviconType"]} href={MetaData["MetaFavicon"]} />
             <link rel="apple-touch-icon" type={MetaData["MetaFaviconType"]} href={MetaData["MetaFavicon"]} />
 
-            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+            <Script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></Script>
         </Head>
     );
 }

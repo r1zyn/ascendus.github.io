@@ -7,8 +7,8 @@ import { Loader } from "../components/Loader";
 import "../styles/globals.scss";
 // import "@docsearch/css";
 
-function App({ Component, pageProps, /*router*/ }: AppProps): JSX.Element {
-    const [isLoading, setLoading]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false) as [boolean, Dispatch<SetStateAction<boolean>>]
+function App({ Component, pageProps/*, router*/ }: AppProps): JSX.Element {
+    const [isLoading, setLoading]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false) as [boolean, Dispatch<SetStateAction<boolean>>];
 
     useEffect((): void => {
         setLoading(true)
