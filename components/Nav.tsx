@@ -5,6 +5,7 @@ import type { NavLinks } from "../structures/Interfaces";
 import type { NextComponentType } from "next";
 import type { PageSection } from "../structures/Types";
 import { Search } from "./Search";
+import { Util } from "../structures/functions/Utils";
 
 import styles from "../styles/App.module.scss";
 
@@ -18,6 +19,11 @@ export const Nav: NextComponentType = () => {
     useEffect((): (() => void) => {
         const header: HTMLElement = document.getElementById("header") as HTMLElement;
         const about: HTMLElement = document.getElementById("about") as HTMLElement;
+
+        window.addEventListener("scroll", (event: Event): void => {
+            if (Util.elementIsInView(header)) setSection("Home");
+            if (Util.elementIsInView(about)) setSection("About");
+        });
 
         setNavLinks({
             scrollToHome: (): void => {
