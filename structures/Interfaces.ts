@@ -1,5 +1,9 @@
 import { Dispatch, SetStateAction } from "react";
 
+export interface BackgroundProps {
+    className?: string | undefined;
+};
+
 export interface BarsProps {
     className?: string | undefined;
 };
