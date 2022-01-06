@@ -57,7 +57,7 @@ const Home: NextPage = () => {
                                         </text>
                                     </svg>
                                 </div>
-
+ 
                                 <div className={styles["section-one-stat-card"]}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="182.024" height="168.718" viewBox="0 0 182.024 168.818">
                                         <rect id="Rectangle_2" data-name="Rectangle 2" width="230" height="250" fill="#f26c4f" />
