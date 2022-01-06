@@ -46,7 +46,7 @@ export const Header: NextComponent = () => {
 
                 <span className={styles["scroll-btn"]} id="scroll-btn">
                     <span className={styles["mouse"]}>
-                        <span></span>
+                        <span></span> 
                     </span>
                 </span>
             </div>
