@@ -66,7 +66,7 @@ const Home: NextPage = () => {
                                             <tspan x="0" y="0">15</tspan>
                                         </text>
                                         <text id="stat-2" transform="translate(40 135)" fill="#ffffff" fontFamily="Montserrat" fontSize="20">
-                                            <tspan x="0" y="0">Websites</tspan>
+                                            <tspan x="0" y="0">Websites</tspan> 
                                         </text>
                                     </svg>
                                 </div>
