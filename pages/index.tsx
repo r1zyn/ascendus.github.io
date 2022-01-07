@@ -39,8 +39,8 @@ const Home: NextPage = () => {
                                         <text id="stat" transform="translate(40 100)" fill="#ffffff" fontFamily="Montserrat" fontSize="100">
                                             <tspan x="0" y="0">15</tspan>
                                         </text>
-                                        <text id="stat-2" transform="translate(40 135)" fill="#ffffff" fontFamily="Montserrat" fontSize="20">
-                                            <tspan x="0" y="0">Websites</tspan>
+                                        <text id="stat-2" transform="translate(30 135)" fill="#ffffff" fontFamily="Montserrat" fontSize="18">
+                                            <tspan x="0" y="0">Discord Bots</tspan>
                                         </text>
                                     </svg>
                                 </div>
@@ -49,8 +49,8 @@ const Home: NextPage = () => {
                                     <svg xmlns="http://www.w3.org/2000/svg" width="182.024" height="168.718" viewBox="0 0 182.024 168.818">
                                         <rect id="Rectangle_2" data-name="Rectangle 2" width="230" height="250" fill="#f26c4f" />
                                         <polygon points="280,150 280,190 240,190" transform="translate(-95 -20)" fill="#1f1f1f" strokeWidth={1} stroke="#1f1f1f" />
-                                        <text id="stat" transform="translate(40 100)" fill="#ffffff" fontFamily="Montserrat" fontSize="100">
-                                            <tspan x="0" y="0">15</tspan>
+                                        <text id="stat" transform="translate(60 100)" fill="#ffffff" fontFamily="Montserrat" fontSize="100">
+                                            <tspan x="0" y="0">7</tspan>
                                         </text>
                                         <text id="stat-2" transform="translate(40 135)" fill="#ffffff" fontFamily="Montserrat" fontSize="20">
                                             <tspan x="0" y="0">Websites</tspan>
@@ -62,11 +62,21 @@ const Home: NextPage = () => {
                                     <svg xmlns="http://www.w3.org/2000/svg" width="182.024" height="168.718" viewBox="0 0 182.024 168.818">
                                         <rect id="Rectangle_2" data-name="Rectangle 2" width="230" height="250" fill="#f26c4f" />
                                         <polygon points="280,150 280,190 240,190" transform="translate(-95 -20)" fill="#1f1f1f" strokeWidth={1} stroke="#1f1f1f" />
-                                        <text id="stat" transform="translate(40 100)" fill="#ffffff" fontFamily="Montserrat" fontSize="100">
-                                            <tspan x="0" y="0">15</tspan>
+                                        <text id="stat" transform="translate(50 100)" fill="#ffffff" fontFamily="Montserrat" fontSize="100">
+                                            <tspan x="0" y="0">4</tspan>
                                         </text>
                                         <text id="stat-2" transform="translate(40 135)" fill="#ffffff" fontFamily="Montserrat" fontSize="20">
-                                            <tspan x="0" y="0">Websites</tspan> 
+                                            <tspan x="0" y="0">Packages</tspan> 
+                                        </text>
+                                    </svg>
+                                </div>
+
+                                <div className={styles["section-one-view-projects"]}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="182.024" height="168.718" viewBox="0 0 182.024 168.818">
+                                        <rect id="Rectangle_2" data-name="Rectangle 2" width="230" height="250" fill="#1f1f1f" />
+                                        <polygon points="280,150 280,190 240,190" transform="translate(-95 -20)" fill="#1f1f1f" strokeWidth={1} stroke="#1f1f1f" />
+                                        <text id="stat-2" transform="translate(30 100)" fill="#f26c4f" fontFamily="Montserrat" fontSize="15">
+                                            <tspan x="0" y="0">→ View projects</tspan> 
                                         </text>
                                     </svg>
                                 </div>
