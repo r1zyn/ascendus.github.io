@@ -141,7 +141,7 @@ export const Nav: NextComponentType = () => {
                         </div>
 
                         <div>
-                            <ul>
+                            <ul className={styles["nav-menu-links"]}>
                                 <li className="mb-1">
                                     <a className={section === "Home" ? `${styles["nav-link-active"]} text` : `${styles["nav-link"]} text`} id="home-link" onClick={(): void => navLinks["scrollToHome"]()}>
                                         Home

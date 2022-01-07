@@ -239,38 +239,20 @@
     border: none;
 }
 
+.nav-menu-links {
+    padding: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-30%);
+    text-align: center;
+}
+
 .nav-menu-bottom {
     margin-top: auto;
 }
 
 .nav-menu-contact-container {
 	padding-top: 1.5rem;
-}
-
-.nav-menu-contact-button {
-    display: block;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    margin-bottom: 0.75rem;
-    line-height: 2;
-    font-size: 0.75rem;
-    width: 75%;
-    line-height: 1rem;
-    text-align: center;
-    border-radius: 0.25rem;
-    color: var(--_secondary);
-    border: 2px solid var(--_secondary);
-    letter-spacing: 0.1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    position: relative;
-}
-
-.nav-menu-contact-button:hover {
-    background: var(--_secondary);
-    color: var(--tertiary);
 }
 
 .nav-menu-socials {
