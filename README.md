@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://github.com/Ascendus/ascendus.github.io/releases" target="_blank">
-        <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge&logo=github&cacheSeconds=2592000" />
+        <img alt="Version" src="https://img.shields.io/github/v/release/Ascendus/ascendus.github.io?color=blue&logo=github&style=for-the-badge" />
     </a>
     <a href="https://opensource.org/licenses/BSD-3-Clause" target="_blank">
         <img alt="License" src="https://img.shields.io/github/license/Ascendus/ascendus.github.io?style=for-the-badge&logo=github" />
@@ -12,7 +12,7 @@
     <a href="https://github.com/Ascendus/ascendus.github.io/contributors" target="_blank">
         <img alt="Contributors" src="https://img.shields.io/github/contributors/Ascendus/ascendus.github.io?style=for-the-badge&logo=github">
     </a>
-    <a href="https://github.com/Astura-Studios/Astura/search?l=typescript" target="_blank">
+    <a href="https://github.com/Ascendus/ascendus.github.io/search?l=typescript" target="_blank">
         <img alt="Top language" src="https://img.shields.io/github/languages/top/Ascendus/ascendus.github.io?style=for-the-badge&logo=github">
     </a>
 </p>
