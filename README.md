@@ -12,7 +12,7 @@
     <a href="https://github.com/Ascendus/ascendus.github.io/contributors" target="_blank">
         <img alt="Contributors" src="https://img.shields.io/github/contributors/Ascendus/ascendus.github.io?style=for-the-badge&logo=github">
     </a>
-    <a href="https://github.com/Ascendus/ascendus.github.io/search?l=typescript" target="_blank">
+    <a href="https://github.com/Ascendus/ascendus.github.io/search?l=TSX" target="_blank">
         <img alt="Top language" src="https://img.shields.io/github/languages/top/Ascendus/ascendus.github.io?style=for-the-badge&logo=github">
     </a>
 </p>
