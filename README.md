@@ -1,4 +1,21 @@
-<img src="public/assets/img/aWjN7gDOFWzazRaKp8QK.svg" align="center">
+<a href="https://github.com/Ascendus/ascendus.github.io">
+    <img src="public/assets/img/aWjN7gDOFWzazRaKp8QK.svg" align="center">
+</a>
+
+<p align="center">
+    <a href="https://github.com/Ascendus/ascendus.github.io/releases" target="_blank">
+        <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge&logo=github&cacheSeconds=2592000" />
+    </a>
+    <a href="https://opensource.org/licenses/BSD-3-Clause" target="_blank">
+        <img alt="License" src="https://img.shields.io/github/license/Ascendus/ascendus.github.io?style=for-the-badge&logo=github" />
+    </a>
+    <a href="https://github.com/Ascendus/ascendus.github.io/contributors" target="_blank">
+        <img alt="Contributors" src="https://img.shields.io/github/contributors/Ascendus/ascendus.github.io?style=for-the-badge&logo=github">
+    </a>
+    <a href="https://github.com/Astura-Studios/Astura/search?l=typescript" target="_blank">
+        <img alt="Top language" src="https://img.shields.io/github/languages/top/Ascendus/ascendus.github.io?style=for-the-badge&logo=github">
+    </a>
+</p>
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
