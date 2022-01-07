@@ -17,9 +17,19 @@
     </a>
 </p>
 
+<br />
+<br />
+
 ## About
 Welcome to the GitHub repository for my website portfolio written in TypeScript (TSX) and SCSS with NextJS! You can view the website at https://ascendus.github.io/.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+* Written in TSX, TypeScript and SCSS for styling.
+* Custom babel configuration
+* Equipped with ESLint linter
+* Custom commit script for commiting changes to GitHub (run `npm run commit`)
+* GitHub pages deployment workflow included
 
 ## Getting Started
 
@@ -55,3 +65,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 This repository is already equipped with a GitHub workflow to deploy this website to GitHub pages. You may need to create a deploy key and an environment variable for the deployment key named `ACTIONS_DEPLOY_KEY`.
+
+## License
+Copyright © 2022 [Ascendus](https://github.com/Ascendus).
+This project is licensed under the [BSD 3 Clause License](https://opensource.org/licenses/BSD-3-Clause).
