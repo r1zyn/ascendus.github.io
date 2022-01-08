@@ -40,6 +40,7 @@ export interface MetaDataOptions {
 export interface NavLinks {
     scrollToHome: () => void;
     scrollToAbout: () => void;
+    scrollToExperience: () => void;
 };
 
 export interface LoaderProps {

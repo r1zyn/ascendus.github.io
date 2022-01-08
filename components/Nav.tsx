@@ -14,15 +14,17 @@ export const Nav: NextComponentType = () => {
     const [isMobile, toggleMobile]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false) as [boolean, Dispatch<SetStateAction<boolean>>];
     const [position, setPosition]: [number, Dispatch<SetStateAction<number>>] = useState(0);
     const [section, setSection]: [PageSection, Dispatch<SetStateAction<PageSection>>] = useState("Home") as [PageSection, Dispatch<SetStateAction<PageSection>>];
-    const [navLinks, setNavLinks]: [NavLinks, Dispatch<SetStateAction<NavLinks>>] = useState({ scrollToHome: (): void => { }, scrollToAbout: (): void => { } }) as [NavLinks, Dispatch<SetStateAction<NavLinks>>];
+    const [navLinks, setNavLinks]: [NavLinks, Dispatch<SetStateAction<NavLinks>>] = useState({ scrollToHome: (): void => { }, scrollToAbout: (): void => { }, scrollToExperience: (): void => { } }) as [NavLinks, Dispatch<SetStateAction<NavLinks>>];
 
     useEffect((): (() => void) => {
         const header: HTMLElement = document.getElementById("header") as HTMLElement;
         const about: HTMLElement = document.getElementById("about") as HTMLElement;
+        const experience: HTMLElement = document.getElementById("experience") as HTMLElement;
 
         window.addEventListener("scroll", (_event: Event): void => {
             if (Util.elementIsInView(header)) setSection("Home");
             if (Util.elementIsInView(about)) setSection("About");
+            if (Util.elementIsInView(experience)) setSection("Experience");
         });
 
         setNavLinks({
@@ -39,6 +41,11 @@ export const Nav: NextComponentType = () => {
                 });
 
                 setSection("About");
+            },
+            scrollToExperience: (): void => {
+                experience.scrollIntoView({
+                    behavior: "smooth"
+                })
             }
         });
 
@@ -90,25 +97,19 @@ export const Nav: NextComponentType = () => {
                             </a>
                         </li>
                         <li>
-                            <Link href="/#applications" passHref>
-                                <a className={`${styles["nav-link"]} text`}>
-                                    Applications
-                                </a>
-                            </Link>
+                            <a className={section === "Experience" ? `${styles["nav-link-active"]} text` : `${styles["nav-link"]} text`} id="experience-link" onClick={(): void => navLinks["scrollToExperience"]()}>
+                                Experience
+                            </a>
                         </li>
                         <li>
-                            <Link href="/#partners" passHref>
-                                <a className={`${styles["nav-link"]} text`}>
-                                    Partners
-                                </a>
-                            </Link>
+                            <a className={`${styles["nav-link"]} text`}>
+                                Projects
+                            </a>
                         </li>
                         <li>
-                            <Link href="/#resources" passHref>
-                                <a className={`${styles["nav-link"]} text`}>
-                                    Resources
-                                </a>
-                            </Link>
+                            <a className={`${styles["nav-link"]} text`}>
+                                Status
+                            </a>
                         </li>
                     </ul>
 
@@ -155,27 +156,21 @@ export const Nav: NextComponentType = () => {
                                 </li>
                                 <br />
                                 <li className="mb-1">
-                                    <Link href="/" passHref>
-                                        <a className={styles["nav-link"]}>
-                                            Applications
-                                        </a>
-                                    </Link>
+                                    <a className={section === "Experience" ? `${styles["nav-link-active"]} text` : `${styles["nav-link"]} text`} id="experience-link" onClick={(): void => navLinks["scrollToExperience"]()}>
+                                        Experience
+                                    </a>
                                 </li>
                                 <br />
                                 <li className="mb-1">
-                                    <Link href="/" passHref>
-                                        <a className={styles["nav-link"]}>
-                                            Partners
-                                        </a>
-                                    </Link>
+                                    <a className={styles["nav-link"]}>
+                                        Projects
+                                    </a>
                                 </li>
                                 <br />
                                 <li className="mb-1">
-                                    <Link href="/" passHref>
-                                        <a className={styles["nav-link"]}>
-                                            Resources
-                                        </a>
-                                    </Link>
+                                    <a className={styles["nav-link"]}>
+                                        Status
+                                    </a>
                                 </li>
                             </ul>
                         </div>
