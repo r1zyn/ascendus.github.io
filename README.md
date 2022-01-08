@@ -6,7 +6,7 @@
     <a href="https://github.com/Ascendus/ascendus.github.io/releases" target="_blank">
         <img alt="Version" src="https://img.shields.io/github/v/release/Ascendus/ascendus.github.io?color=blue&logo=github&style=for-the-badge" />
     </a>
-    <a href="https://opensource.org/licenses/BSD-3-Clause" target="_blank">
+    <a href="https://github.com/Ascendus/ascendus.github.io/blob/main/LICENSE" target="_blank">
         <img alt="License" src="https://img.shields.io/github/license/Ascendus/ascendus.github.io?style=for-the-badge&logo=github" />
     </a>
     <a href="https://github.com/Ascendus/ascendus.github.io/contributors" target="_blank">
@@ -30,6 +30,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 * Equipped with ESLint linter
 * Custom commit script for commiting changes to GitHub (run `npm run commit`)
 * GitHub pages deployment workflow included
+
+Give a star if this repository helped you!
 
 ## Getting Started
 
@@ -58,6 +60,12 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!    
 
+## Contributing
+If you have any issues/bus or security vulnerabilites to report, you can head over to the [issues page](https://github.com/Ascendus/ascendus.github.io/issues).
+If you'd like to contribute to the repository, feel free to open a [pull request](https://github.com/Ascendus/ascendus.github.io/pulls).
+
+To learn more about contributing, you can check out the [contributing guide](https://github.com/Ascendus/ascendus.github.io/blob/main/.github/CONTRIBUTING.md). Please ensure all contributions follow the [code of conduct](https://github.com/Ascendus/ascendus.github.io/blob/main/.github/CODE_OF_CONDUCT.md).
+
 ## Deploying
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
@@ -68,4 +76,4 @@ This repository is already equipped with a GitHub workflow to deploy this websit
 
 ## License
 Copyright © 2022 [Ascendus](https://github.com/Ascendus).
-This project is licensed under the [BSD 3 Clause License](https://opensource.org/licenses/BSD-3-Clause).
+This project is licensed under the [BSD 3 Clause License](https://github.com/Ascendus/ascendus.github.io/blob/main/LICENSE).
