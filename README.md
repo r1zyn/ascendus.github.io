@@ -31,10 +31,19 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 * Custom commit script for commiting changes to GitHub (run `npm run commit`)
 * GitHub pages deployment workflow included
 
-Give a star if this repository helped you!
+Give a ⭐ if this repository helped you!
+
+## Workflows
+This repository uses the following workflows:
+* CodeQL
+* Deploy to GitHub Pages
+* Greetings
+* Labeler
+* pages-build-deployment
+
+You can view the full list of worklows [here](https://github.com/Ascendus/ascendus.github.io/actions).
 
 ## Getting Started
-
 First, run the development server:
 
 ```bash
@@ -52,7 +61,6 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## Learn More
-
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
@@ -64,15 +72,27 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 If you have any issues/bus or security vulnerabilites to report, you can head over to the [issues page](https://github.com/Ascendus/ascendus.github.io/issues).
 If you'd like to contribute to the repository, feel free to open a [pull request](https://github.com/Ascendus/ascendus.github.io/pulls).
 
-To learn more about contributing, you can check out the [contributing guide](https://github.com/Ascendus/ascendus.github.io/blob/main/.github/CONTRIBUTING.md). Please ensure all contributions follow the [code of conduct](https://github.com/Ascendus/ascendus.github.io/blob/main/.github/CODE_OF_CONDUCT.md).
+To learn more about contributing, you can check out the [contributing guide](https://github.com/Ascendus/ascendus.github.io/blob/main/.github/CONTRIBUTING.md). Please ensure all contributions follow the [code of conduct](https://github.com/Ascendus/ascendus.github.io/blob/main/.github/CODE_OF_CONDUCT.md). You can view the secruity policy [here](https://github.com/Ascendus/ascendus.github.io/blob/main/.github/SECURITY.md).
 
 ## Deploying
-
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 This repository is already equipped with a GitHub workflow to deploy this website to GitHub pages. You may need to create a deploy key and an environment variable for the deployment key named `ACTIONS_DEPLOY_KEY`.
+
+## Useful Links
+* [Repository Homepage](https://github.com/Ascendus/ascendus.github.io)
+* [Website](https://ascendus.github.io)
+* [Issues Page](https://github.com/Ascendus/ascendus.github.io/issues)
+* [Pull Requests](https://github.com/Ascendus/ascendus.github.io/pulls)
+* [Workflows](https://github.com/Ascendus/ascendus.github.io/actions)
+* [Project Board](https://github.com/users/Ascendus/projects/1)
+* [License](https://github.com/Ascendus/ascendus.github.io/blob/main/LICENSE)
+* [Code of Conduct](https://github.com/Ascendus/ascendus.github.io/blob/main/.github/CODE_OF_CONDUCT.md)
+* [Contributing Guide](https://github.com/Ascendus/ascendus.github.io/blob/main/.github/CONTRIBUTING.md)
+* [Security Policy](https://github.com/Ascendus/ascendus.github.io/blob/main/.github/SECURITY.md)
+* [Owners](https://github.com/Ascendus/ascendus.github.io/blob/main/.github/CODEOWNERS)
 
 ## License
 Copyright © 2022 [Ascendus](https://github.com/Ascendus).
