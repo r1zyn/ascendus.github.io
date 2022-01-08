@@ -1,8 +1,8 @@
 import { Head } from "./BaseComponents";
-import { MetaData } from "../structures/Constants";
-import type { NextComponent } from "../structures/Types";
+import { MetaData } from "../src/Constants";
+import type { NextComponent } from "../src/Types";
 import { Script } from "./BaseComponents";
-import { URL } from "../structures/Constants";
+import { URL } from "../src/Constants";
 
 export const Meta: NextComponent = () => {
     return (

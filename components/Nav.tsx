@@ -1,11 +1,11 @@
 import { Dispatch, Fragment, SetStateAction, useState, useEffect } from "react";
-import { Icon, Links } from "../structures/Constants";
+import { Icon, Links } from "../src/Constants";
 import { Head, Image, Link, Loader } from "./BaseComponents";
-import type { NavLinks } from "../structures/Interfaces";
+import type { NavLinks } from "../src/Interfaces";
 import type { NextComponentType } from "next";
-import type { PageSection } from "../structures/Types";
+import type { PageSection } from "../src/Types";
 import { Search } from "./Search";
-import { Util } from "../structures/functions/Utils";
+import { Util } from "../src/functions/Utils";
 
 import styles from "../styles/App.module.scss";
 

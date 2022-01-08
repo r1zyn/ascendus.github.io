@@ -1,13 +1,13 @@
-import { BarsProps } from "../structures/Interfaces";
-import type { NextComponent } from "../structures/Types";
-import { Util } from "../structures/functions/Utils";
+import { BarsProps } from "../src/Interfaces";
+import type { NextComponent } from "../src/Types";
+import { Util } from "../src/functions/Utils";
 
 import { useEffect } from "react";
 
 import styles from "../styles/App.module.scss";
 
 export const Bars: NextComponent<BarsProps> = ({ className }: BarsProps) => {
-    useEffect(() => {
+    useEffect((): void => {
         const rectangleOne: HTMLElement = document.getElementById("rectangle-one") as HTMLElement;
         const rectangleTwo: HTMLElement = document.getElementById("rectangle-two") as HTMLElement;
         const rectangleThree: HTMLElement = document.getElementById("rectangle-three") as HTMLElement;

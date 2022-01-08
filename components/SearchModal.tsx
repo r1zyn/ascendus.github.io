@@ -1,6 +1,6 @@
 import { FormEvent, useEffect } from "react";
-import { NextComponent } from "../structures/Types";
-import { SearchModalProps, TextElement } from "../structures/Interfaces";
+import { NextComponent } from "../src/Types";
+import { SearchModalProps, TextElement } from "../src/Interfaces";
 import { SearchResult } from "./SearchResult";
 
 import styles from "../styles/App.module.scss";

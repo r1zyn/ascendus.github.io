@@ -1,6 +1,6 @@
 import { Character } from "./Character";
 import { Nav } from "./Nav";
-import type { NextComponent } from "../structures/Types";
+import type { NextComponent } from "../src/Types";
 
 import { useEffect } from "react";
 

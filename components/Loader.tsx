@@ -1,5 +1,5 @@
-import type { LoaderProps } from "../structures/Interfaces";
-import type { NextComponent } from "../structures/Types";
+import type { LoaderProps } from "../src/Interfaces";
+import type { NextComponent } from "../src/Types";
 
 import styles from "../styles/Loader.module.scss";
 

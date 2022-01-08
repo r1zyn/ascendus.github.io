@@ -1,5 +1,5 @@
-import { CharacterProps } from "../structures/Interfaces";
-import { NextComponent } from "../structures/Types";
+import { CharacterProps } from "../src/Interfaces";
+import { NextComponent } from "../src/Types";
 
 export const Character: NextComponent<CharacterProps> = ({ unicode }: CharacterProps) => {
     return (

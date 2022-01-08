@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { Icon } from "./BaseComponents"
-import type { NextComponent } from "../structures/Types";
-import type { SearchBarProps } from "../structures/Interfaces";
+import type { NextComponent } from "../src/Types";
+import type { SearchBarProps } from "../src/Interfaces";
 
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 

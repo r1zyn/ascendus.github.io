@@ -1,5 +1,5 @@
-import type { NextComponent } from "../structures/Types";
-import type { TextElement } from "../structures/Interfaces";
+import type { NextComponent } from "../src/Types";
+import type { TextElement } from "../src/Interfaces";
 
 import styles from "../styles/App.module.scss";
 

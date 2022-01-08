@@ -1,5 +1,5 @@
-import type { BackgroundProps } from "../structures/Interfaces";
-import type { NextComponent } from "../structures/Types";
+import type { BackgroundProps } from "../src/Interfaces";
+import type { NextComponent } from "../src/Types";
 
 export const Background: NextComponent<BackgroundProps> = ({ className }: BackgroundProps) => {
     return (
