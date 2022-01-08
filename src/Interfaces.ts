@@ -1,5 +1,38 @@
 import { Dispatch, SetStateAction } from "react";
 
+export interface ActivityData {
+    type?: number;
+    state?: string;
+    name?: string;
+    id?: string;
+    created_at?: number;
+    timestamps?: ActivityTimestamp;
+    sync_id?: string;
+    session_id?: string;
+    party?: ActivityParty;
+    flags?: number;
+    details?: string;
+    assets?: ActivityAssets;
+    buttons?: string[];
+    application_id?: string;
+};
+
+export interface ActivityAssets {
+    large_text?: string;
+    large_image?: string;
+    small_image?: string;
+    small_text?: string;
+};
+
+export interface ActivityParty {
+    id?: string;
+};
+
+export interface ActivityTimestamp {
+    start?: number;
+    end?: number;
+};
+
 export interface BackgroundProps {
     className?: string | undefined;
 };
@@ -84,4 +117,40 @@ export interface User {
     flags?: string;
     premium_type?: string;
     public_flags?: string;
+    platform?: "web" | "mobile" | "desktop";
+    presence: {
+        activities: ActivityData[];
+        status: string;
+    }
+};
+
+export interface PresenceData {
+    "success": boolean;
+    "data"?: {
+        "spotify"?: {
+            "track_id"?: string;
+            "timestamps"?: {
+                "start"?: number;
+                "end"?: number;
+            },
+            "song"?: string;
+            "artist"?: string;
+            "album_art_url"?: string;
+            "album"?: string;
+        },
+        "listening_to_spotify"?: boolean;
+        "kv"?: {},
+        "discord_user"?: {
+            "username"?: string;
+            "public_flags"?: number;
+            "id"?: string;
+            "discriminator"?: string;
+            "avatar"?: string;
+        },
+        "discord_status"?: string;
+        "activities": ActivityData[];
+        "active_on_discord_web": boolean;
+        "active_on_discord_mobile": boolean;
+        "active_on_discord_desktop": boolean;
+    }
 }

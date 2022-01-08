@@ -2,7 +2,7 @@ import { Background } from "../components/Background";
 import { Character } from "../components/Character";
 import { Fragment } from "react";
 import { Header } from "../components/Header";
-import type { HomeProps, User } from "../src/Interfaces";
+import type { ActivityData, HomeProps, PresenceData, User } from "../src/Interfaces";
 import { Meta } from "../components/Meta";
 import type { NextPage } from "next";
 
@@ -131,8 +131,17 @@ Home.getInitialProps = async ({ req }): Promise<HomeProps> => {
 
     if (!response.ok) throw new Error(`An error occured while attemping to fetch user "${id}" from Discord API. Status code: ${await response.text()}`);
 
-    const user: User = await (response.json() as Promise<User>);
+    const res: Response = await fetch(`https://api.lanyard.rest/v1/users/${id}`);
+    const presence: PresenceData = await res.json();
+    const user: User = await (response.json() as Promise<User>);    
+    
+    if (presence.data?.active_on_discord_desktop) user.platform === "desktop";
+    if (presence.data?.active_on_discord_mobile) user.platform === "mobile";
+    if (presence.data?.active_on_discord_web) user.platform === "web";
 
+    user.presence.status = presence.data?.discord_status as string;
+    user.presence.activities = presence.data?.activities as ActivityData[];
+    
     return {
         user
     };
