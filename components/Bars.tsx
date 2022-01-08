@@ -1,5 +1,6 @@
 import { BarsProps } from "../structures/Interfaces";
 import type { NextComponent } from "../structures/Types";
+import { Util } from "../structures/functions/Utils";
 
 import { useEffect } from "react";
 
@@ -13,6 +14,18 @@ export const Bars: NextComponent<BarsProps> = ({ className }: BarsProps) => {
 
         const header: HTMLElement = document.getElementById("header") as HTMLElement;
         const about: HTMLElement = document.getElementById("about") as HTMLElement;
+
+        window.addEventListener("scroll", (_event: Event): void => {
+            if (Util.elementIsInView(header)) {
+                rectangleOne.style.cssText += "filter: brightness(55%);";
+                rectangleTwo.style.cssText = "bar:hover { filter: brightness(55%); cursor: pointer; }";
+            };
+            
+            if (Util.elementIsInView(about)) {
+                rectangleOne.style.cssText = "bar:hover { filter: brightness(55%); cursor: pointer; }";
+                rectangleTwo.style.cssText += "filter: brightness(55%);";
+            };
+        }); 
 
         const bars: HTMLElement[] = [rectangleOne, rectangleTwo, rectangleThree];
         bars.forEach((bar: HTMLElement): void => {

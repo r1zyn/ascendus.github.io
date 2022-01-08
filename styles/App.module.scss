@@ -586,7 +586,6 @@
     right: 0;
     top: 72vh;
     text-align: center;
-    cursor: pointer;
 }
 
 .scroll-btn > * {
@@ -625,6 +624,7 @@
     box-sizing: border-box;
     border: 3px solid white;
     border-radius: 23px;
+    cursor: pointer;
 }
 
 .scroll-btn .mouse > * {

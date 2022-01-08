@@ -8,7 +8,7 @@ import styles from "../styles/App.module.scss";
 
 export const Header: NextComponent = () => {
     useEffect((): void => {
-        const scrollBtn: HTMLSpanElement = document.getElementById("scroll-btn") as HTMLSpanElement;
+        const scrollBtn: HTMLSpanElement = document.getElementById("mouse") as HTMLSpanElement;
         const about: HTMLElement = document.getElementById("about") as HTMLElement;
         scrollBtn.addEventListener("click", (_event: MouseEvent): void => {
             about.scrollIntoView({
@@ -45,7 +45,7 @@ export const Header: NextComponent = () => {
                 </div>
 
                 <span className={styles["scroll-btn"]} id="scroll-btn">
-                    <span className={styles["mouse"]}>
+                    <span className={styles["mouse"]} id="mouse">
                         <span></span> 
                     </span>
                 </span>

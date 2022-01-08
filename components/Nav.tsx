@@ -20,7 +20,7 @@ export const Nav: NextComponentType = () => {
         const header: HTMLElement = document.getElementById("header") as HTMLElement;
         const about: HTMLElement = document.getElementById("about") as HTMLElement;
 
-        window.addEventListener("scroll", (event: Event): void => {
+        window.addEventListener("scroll", (_event: Event): void => {
             if (Util.elementIsInView(header)) setSection("Home");
             if (Util.elementIsInView(about)) setSection("About");
         });
