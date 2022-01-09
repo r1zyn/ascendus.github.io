@@ -2,17 +2,17 @@ import { Background } from "../components/Background";
 import { Character } from "../components/Character";
 import { Fragment } from "react";
 import { Header } from "../components/Header";
-import type { ActivityData, HomeProps, PresenceData, User } from "../src/Interfaces";
+import { Icon } from "../components/Icon";
 import { Meta } from "../components/Meta";
 import type { NextPage } from "next";
 
 import { useEffect } from "react";
 
+import data from "../src/data/Icons.json";
 import styles from "../styles/App.module.scss";
 
-const Home: NextPage<HomeProps> = ({ user }) => {
+const Home: NextPage = () => {
     useEffect((): void => {
-        console.log(user);
         const viewProjectsButton: HTMLElement = document.getElementById("view-projects") as HTMLElement;
         const projectsSection: HTMLElement = document.getElementById("experience") as HTMLElement; // Change to projects section later
         viewProjectsButton.addEventListener("click", (_event: MouseEvent): void => {
@@ -43,7 +43,7 @@ const Home: NextPage<HomeProps> = ({ user }) => {
 
                             <h2 className={`${styles["section-one-info-subheader"]} text`}>The developer imagining great things.</h2>
                             <p className={`${styles["section-one-info-text"]} text`}>
-                                I started my programming journey during the <Character unicode="f"/>irst lockdown in New Zealand during March 2020, ambitious to begin creating Discord bots for both personal and public use. Ever since, I have continued to expand my knowledge to websites, applications, NPM packages, Command Line Interfaces, REST apis and some game development. I<Character unicode="'" />ve learnt several languages starting from JavaScript <Character unicode="(" />NodeJS<Character unicode=")" /> to TypeScript, Python, Lua, C<Character unicode="#" />, Go and much more.
+                                I started my programming journey during the <Character unicode="f" />irst lockdown in New Zealand during March 2020, ambitious to begin creating Discord bots for both personal and public use. Ever since, I have continued to expand my knowledge to websites, applications, NPM packages, Command Line Interfaces, REST apis and some game development. I<Character unicode="'" />ve learnt several languages starting from JavaScript <Character unicode="(" />NodeJS<Character unicode=")" /> to TypeScript, Python, Lua, C<Character unicode="#" />, Go and much more.
                             </p>
                         </div>
 
@@ -82,7 +82,7 @@ const Home: NextPage<HomeProps> = ({ user }) => {
                                         <tspan x="0" y="0">4</tspan>
                                     </text>
                                     <text id="stat-2" transform="translate(40 135)" fill="#ffffff" fontFamily="Montserrat" fontSize="20">
-                                        <tspan x="0" y="0">Packages</tspan> 
+                                        <tspan x="0" y="0">Packages</tspan>
                                     </text>
                                 </svg>
                             </div>
@@ -92,7 +92,7 @@ const Home: NextPage<HomeProps> = ({ user }) => {
                                     <rect id="Rectangle_2" data-name="Rectangle 2" width="230" height="250" fill="#1f1f1f" />
                                     <polygon points="280,150 280,190 240,190" transform="translate(-95 -20)" fill="#1f1f1f" strokeWidth={1} stroke="#1f1f1f" />
                                     <text id="view-projects" transform="translate(30 100)" fill="#f26c4f" fontFamily="Montserrat" fontSize="15">
-                                        <tspan x="0" y="0">→ View projects</tspan> 
+                                        <tspan x="0" y="0">→ View projects</tspan>
                                     </text>
                                 </svg>
                             </div>
@@ -103,15 +103,61 @@ const Home: NextPage<HomeProps> = ({ user }) => {
                 <div className={styles["section-two-container"]} id="experience">
                     <div className={styles["section-two-content"]}>
                         <div className={styles["section-two-info-container"]}>
-                            <span className={`${styles["section-two-info-header"]} text`}>
-                                Languages
+                            <span className={`${styles["section-two-header"]} text`}>
+                                Used Languages
                                 &nbsp;
                                 &nbsp;
                                 ⎯⎯⎯⎯⎯⎯⎯⎯⎯
                             </span>
 
-                            <div className={styles["section-one-languages"]}>
+                            <div className={styles["section-two-languages"]}>
+                                {
+                                    data.languages.map((icon: string): JSX.Element => {
+                                        return <Icon key={icon} iconURL={icon} />
+                                    })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div className={styles["section-two-container"]}>
+                    <div className={styles["section-two-content"]}>
+                        <div className={styles["section-two-info-container"]}>
+                            <span className={`${styles["section-two-header"]} text`}>
+                                Used Frameworks
+                                &nbsp;
+                                &nbsp;
+                                ⎯⎯⎯⎯⎯⎯⎯⎯⎯
+                            </span>
+
+                            <div className={styles["section-two-frameworks"]}>
+                                {
+                                    data.frameworks.map((icon: string): JSX.Element => {
+                                        return <Icon key={icon} iconURL={icon} />
+                                    })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles["section-two-container"]}>
+                    <div className={styles["section-two-content"]}>
+                        <div className={styles["section-two-info-container"]}>
+                            <span className={`${styles["section-two-header"]} text`}>
+                                Used Software
+                                &nbsp;
+                                &nbsp;
+                                ⎯⎯⎯⎯⎯⎯⎯⎯⎯
+                            </span>
+
+                            <div className={styles["section-two-software"]}>
+                                {
+                                    data.software.map((icon: string): JSX.Element => {
+                                        return <Icon key={icon} iconURL={icon} />
+                                    })
+                                }
                             </div>
                         </div>
                     </div>
@@ -119,32 +165,6 @@ const Home: NextPage<HomeProps> = ({ user }) => {
             </main>
         </Fragment>
     );
-};
-
-Home.getInitialProps = async ({ req }): Promise<HomeProps> => {
-    const id: string = process.env.USER_ID as string;
-    const response: Response = await fetch(`https://discord.com/api/v9/users/${id}`, {
-        headers: {
-            "Authorization": `Bot ${process.env.TOKEN as string}`
-        }
-    });
-
-    if (!response.ok) throw new Error(`An error occured while attemping to fetch user "${id}" from Discord API. Status code: ${await response.text()}`);
-
-    const res: Response = await fetch(`https://api.lanyard.rest/v1/users/${id}`);
-    const presence: PresenceData = await res.json();
-    const user: User = await (response.json() as Promise<User>);    
-    
-    if (presence.data?.active_on_discord_desktop) user.platform === "desktop";
-    if (presence.data?.active_on_discord_mobile) user.platform === "mobile";
-    if (presence.data?.active_on_discord_web) user.platform === "web";
-
-    user.presence.status = presence.data?.discord_status as string;
-    user.presence.activities = presence.data?.activities as ActivityData[];
-    
-    return {
-        user
-    };
 };
 
 export default Home;

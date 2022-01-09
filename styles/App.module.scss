@@ -10,6 +10,10 @@
     display: none;
 }
 
+.bar-active { 
+    filter: brightness(55%);
+}
+
 .bar:hover {
     filter: brightness(55%);
     cursor: pointer;
@@ -801,14 +805,48 @@
 }
 
 .section-two-content {
+    background-color: var(--_primary);
     position: relative;
     top: 50%;
     left: 50%;
     transform: translateX(-45%) translateY(-50%);
 }
 
-.section-two-info-header {
+.section-two-header {
     color: var(--_secondary);
     font-size: 0.7rem;
     overflow-x: hidden;
+}
+
+.section-two-languages {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+}
+
+.icon {
+    height: 8rem;
+    width: 8rem;
+    background: no-repeat;
+}
+
+.section-two-frameworks {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+}
+
+.section-two-software {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
 }

@@ -15,26 +15,38 @@ export const Bars: NextComponent<BarsProps> = ({ className }: BarsProps) => {
         const header: HTMLElement = document.getElementById("header") as HTMLElement;
         const about: HTMLElement = document.getElementById("about") as HTMLElement;
         const experience: HTMLElement = document.getElementById("experience") as HTMLElement;
+        const bars: HTMLElement[] = [rectangleOne, rectangleTwo, rectangleThree];
 
         if (Util.elementIsInView(header)) {
-            rectangleOne.style.cssText += "filter: brightness(55%);";
-            rectangleTwo.style.cssText = "bar:hover { filter: brightness(55%); cursor: pointer; }";
-            rectangleThree.style.cssText = "bar:hover { filter: brightness(55%); cursor: pointer; }";
+            rectangleOne.classList.toggle("bar-active");
+            rectangleTwo.classList.toggle("bar");
+            rectangleThree.classList.toggle("bar");
+        } else if (Util.elementIsInView(about)) {
+            rectangleOne.classList.toggle("bar");
+            rectangleTwo.classList.toggle("bar-active");
+            rectangleThree.classList.toggle("bar");
+        } if (Util.elementIsInView(experience)) {
+            rectangleOne.classList.toggle("bar");
+            rectangleTwo.classList.toggle("bar");
+            rectangleThree.classList.toggle("bar-active");
         };
 
-        if (Util.elementIsInView(about)) {
-            rectangleOne.style.cssText = "bar:hover { filter: brightness(55%); cursor: pointer; }";
-            rectangleTwo.style.cssText += "filter: brightness(55%);";
-            rectangleThree.style.cssText = "bar:hover { filter: brightness(55%); cursor: pointer; }";
+        window.onscroll = (_event: Event): void => {
+            if (Util.elementIsInView(header)) {
+                rectangleOne.classList.toggle("bar-active");
+                rectangleTwo.classList.toggle("bar");
+                rectangleThree.classList.toggle("bar");
+            } else if (Util.elementIsInView(about)) {
+                rectangleOne.classList.toggle("bar");
+                rectangleTwo.classList.toggle("bar-active");
+                rectangleThree.classList.toggle("bar");
+            } if (Util.elementIsInView(experience)) {
+                rectangleOne.classList.toggle("bar");
+                rectangleTwo.classList.toggle("bar");
+                rectangleThree.classList.toggle("bar-active");
+            };
         };
 
-        if (Util.elementIsInView(experience)) {
-            rectangleOne.style.cssText = "bar:hover { filter: brightness(55%); cursor: pointer; }";
-            rectangleTwo.style.cssText = "bar:hover { filter: brightness(55%); cursor: pointer; }";
-            rectangleThree.style.cssText += "filter: brightness(55%);";
-        };
-
-        const bars: HTMLElement[] = [rectangleOne, rectangleTwo, rectangleThree];
         bars.forEach((bar: HTMLElement): void => {
             bar.addEventListener("click", (_event: MouseEvent): void => {
                 switch (bar.id) {
@@ -43,12 +55,20 @@ export const Bars: NextComponent<BarsProps> = ({ className }: BarsProps) => {
                             behavior: "smooth"
                         });
 
+                        rectangleOne.classList.toggle("bar-active");
+                        rectangleTwo.classList.toggle("bar");
+                        rectangleThree.classList.toggle("bar");
+
                         break;
 
                     case "rectangle-two":
                         about.scrollIntoView({
                             behavior: "smooth"
                         });
+
+                        rectangleOne.classList.toggle("bar");
+                        rectangleTwo.classList.toggle("bar-active");
+                        rectangleThree.classList.toggle("bar");
 
                         break;
 
@@ -57,11 +77,15 @@ export const Bars: NextComponent<BarsProps> = ({ className }: BarsProps) => {
                             behavior: "smooth"
                         });
 
+                        rectangleOne.classList.toggle("bar");
+                        rectangleTwo.classList.toggle("bar");
+                        rectangleThree.classList.toggle("bar-active");
+
                         break;
                 }
             });
         });
-    }, []);
+    });
 
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="291" viewBox="0 0 8 291" className={className}>
