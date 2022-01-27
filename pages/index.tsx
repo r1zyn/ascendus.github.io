@@ -112,6 +112,7 @@ const Home: NextPage = () => {
 
                             <div className={styles["section-two-languages"]}>
                                 {
+                                    // Maybe add GitHub language stats?
                                     data.languages.map((icon: string): JSX.Element => {
                                         return <Icon key={icon} iconURL={icon} />
                                     })

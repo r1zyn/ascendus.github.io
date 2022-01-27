@@ -79,7 +79,7 @@ export const Nav: NextComponentType = () => {
                     <div className={styles["nav-header"]} style={{ zIndex: 197 }}>
                         <Link href="/" passHref>
                             <a className={styles["nav-icon-section"]}>
-                                <Image className={styles["nav-icon"]} src={Icon} alt="Ascendus's logo" height={45} width={45} loader={Loader} />
+                                <Image className={styles["nav-icon"]} src={Icon} alt="Ascendus's logo" height={45} width={45} /*loader={Loader}*/ />
                             </a>
                         </Link>
                     </div>
@@ -131,7 +131,7 @@ export const Nav: NextComponentType = () => {
                         <div className={styles["nav-menu-header"]}>
                             <Link href="/" passHref>
                                 <a className={styles["nav-icon-container"]}>
-                                    <Image className={styles["nav-icon"]} src={Icon} alt="Ascendus's logo" height={45} width={45} loader={Loader} />
+                                    <Image className={styles["nav-icon"]} src={Icon} alt="Ascendus's logo" height={45} width={45} /*loader={Loader}*/ />
                                 </a>
                             </Link>
                             <button className={styles["nav-menu-close-container"]} onClick={(): void => toggleMobile(!isMobile)}>
